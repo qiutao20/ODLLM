@@ -3,8 +3,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#usage)
 [![Framework](https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg)](#usage)
 [![PEFT](https://img.shields.io/badge/PEFT-LoRA-green.svg)](#method)
-[![Conference](https://img.shields.io/badge/IJCNN-2026%20Accepted-2ea44f.svg)](#citation)
-[![Status](https://img.shields.io/badge/Status-Not%20Yet%20Published-lightgrey.svg)](#citation)
 
 This repository contains the code, data files, and LoRA adapter weights for **FLOOD**,
 a framework for fine-tuning large language models (LLMs) to make online decisions.
@@ -14,10 +12,9 @@ sequentially without future information. The core idea is to relax the online
 problem into an offline version, solve it with full hindsight to obtain oracle
 decision trajectories, and then distill those trajectories into an LLM.
 
-**Paper status:** accepted by the 2026 International Joint Conference on Neural
-Networks (IJCNN 2026), not yet published.
-
-![FLOOD overview](assets/overview.png)
+<p align="center">
+  <img src="assets/overview.png" alt="FLOOD overview" width="720">
+</p>
 
 ## Overview
 
@@ -168,11 +165,11 @@ resource over-ratio (OR).
 If this repository is useful for your research, please cite:
 
 ```bibtex
-@misc{qiu2026flood,
+@inproceedings{qiu2026flood,
   title     = {FLOOD: Fine-tuning LLM with Offline Optimal Oracle for Online Decision Making},
   author    = {Qiu, Tao and Xiao, Kaiming and Zhang, Hang and Chen, Zhihao and Yang, Haoyu and Li, Xuan and Wang, Mao},
-  year      = {2026},
-  note      = {Accepted by the 2026 International Joint Conference on Neural Networks (IJCNN 2026), not yet published}
+  booktitle = {IJCNN},
+  year      = {2026}
 }
 ```
 
