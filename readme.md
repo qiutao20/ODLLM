@@ -1,5 +1,11 @@
 # FLOOD: Fine-tuning LLM with Offline Optimal Oracle for Online Decision Making
 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#usage)
+[![Framework](https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg)](#usage)
+[![PEFT](https://img.shields.io/badge/PEFT-LoRA-green.svg)](#method)
+[![Conference](https://img.shields.io/badge/IJCNN-2026%20Accepted-2ea44f.svg)](#citation)
+[![Status](https://img.shields.io/badge/Status-Not%20Yet%20Published-lightgrey.svg)](#citation)
+
 This repository contains the code, data files, and LoRA adapter weights for **FLOOD**,
 a framework for fine-tuning large language models (LLMs) to make online decisions.
 
@@ -7,6 +13,11 @@ FLOOD addresses online decision-making problems where decisions must be made
 sequentially without future information. The core idea is to relax the online
 problem into an offline version, solve it with full hindsight to obtain oracle
 decision trajectories, and then distill those trajectories into an LLM.
+
+**Paper status:** accepted by the 2026 International Joint Conference on Neural
+Networks (IJCNN 2026), not yet published.
+
+![FLOOD overview](assets/overview.png)
 
 ## Overview
 
@@ -26,16 +37,19 @@ pipeline:
 5. Align optimization with decision periods using **Decision Period Aligned
    Gradient Accumulation (DPAGA)**.
 
-The camera-ready paper evaluates FLOOD on synthetic online resource-allocation
-instances and a real-world sequential emergency dataset. The results show that
-FLOOD can generalize from synthetically generated oracle trajectories to online
-deployment settings, and that DPAGA is important for stable oracle distillation.
+The IJCNN 2026 accepted camera-ready paper evaluates FLOOD on synthetic online
+resource-allocation instances and a real-world sequential emergency dataset. The
+results show that FLOOD can generalize from synthetically generated oracle
+trajectories to online deployment settings, and that DPAGA is important for
+stable oracle distillation.
 
 ## Repository Structure
 
 ```text
 .
 |-- readme.md
+|-- assets/
+|   `-- overview.png
 |-- train/
 |   |-- ODLLM/
 |   |   |-- get_data/offline_algorithm/
@@ -157,7 +171,8 @@ If this repository is useful for your research, please cite:
 @misc{qiu2026flood,
   title     = {FLOOD: Fine-tuning LLM with Offline Optimal Oracle for Online Decision Making},
   author    = {Qiu, Tao and Xiao, Kaiming and Zhang, Hang and Chen, Zhihao and Yang, Haoyu and Li, Xuan and Wang, Mao},
-  year      = {2026}
+  year      = {2026},
+  note      = {Accepted by the 2026 International Joint Conference on Neural Networks (IJCNN 2026), not yet published}
 }
 ```
 
