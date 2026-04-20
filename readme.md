@@ -13,7 +13,7 @@ problem into an offline version, solve it with full hindsight to obtain oracle
 decision trajectories, and then distill those trajectories into an LLM.
 
 <p align="center">
-  <img src="assets/overview.png" alt="FLOOD overview" width="720">
+  <img src="assets/overview.png" alt="FLOOD overview" width="560">
 </p>
 
 ## Overview
